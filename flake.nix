@@ -11,7 +11,7 @@
       overlay = (final: prev: {
         sqlite_metadata = final.writeShellApplication {
           name = "sqlite_metadata";
-          runtimeInputs = [ final.jq ];
+          runtimeInputs = [ final.sqlite ];
           text = builtins.readFile ./sqlite_metadata.sh;
         };
       });
